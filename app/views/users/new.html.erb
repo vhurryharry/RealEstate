@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <br><br>
+    <%= f.label :role %>
+    <%= f.text_field :role %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+    <br><br>
+    <%= f.submit "Sign Up" %>
+    <br><br>
+    <%= link_to "Already have an account?", '/login', class: 'button alt' %>
+<% end %>

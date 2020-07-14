@@ -1,0 +1,19 @@
+<h1>Properties</h1>
+
+<% if is_manager? %>
+    <%= link_to "Add property", '/properties/new', class: 'button alt' %>
+<% end %>
+
+<table>
+    <tr>
+        <th>Owner</th>
+        <th>Address</th>
+    </tr>
+
+    <% @properties.each do |property| %>
+        <tr>
+            <td><%= property.owner %></td>
+            <td><%= property.address %></td>
+        </tr>
+    <% end %>
+</table>

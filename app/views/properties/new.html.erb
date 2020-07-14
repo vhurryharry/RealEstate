@@ -1,0 +1,57 @@
+<%= form_with scope: :property, url: properties_path, local: true do |form| %>
+    <p>
+        <%= form.label :type %>
+        <%= form.select(:type, ['House', 'Complex Building', 'Commercial Unit']) %>
+    </p>
+
+    <p>
+        <%= form.label :address %>
+        <%= form.text_field :address %>
+    </p>
+
+    <p>
+        <%= form.label :rooms %>
+        <%= form.number_field :rooms %>
+    </p>
+
+    <p>
+        <%= form.label :units %>
+        <%= form.number_field :units %>
+    </p>
+
+    <p>
+        <%= form.label :shops %>
+        <%= form.number_field :shops %>
+    </p>
+
+    <p>
+        <%= form.label :sqmt %>
+        <%= form.number_field :sqmt %>
+    </p>
+
+    <p>
+        <%= form.label :parking %>
+        <%= form.number_field :parking %>
+    </p>
+
+    <p>
+        <%= form.label :floors %>
+        <%= form.number_field :floors %>
+    </p>
+
+    <p>
+        <%= form.label :air_cond %>
+        <%= form.check_box :air_cond %>
+    </p>    
+
+    <p>
+        <%= form.label :price %>
+        <%= form.number_field :price %>
+    </p>
+
+    <%= hidden_field_tag "owner", current_user.id %>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
